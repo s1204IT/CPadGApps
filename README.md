@@ -8,7 +8,11 @@
 - **TAB-A03-BR3**
 - **TAB-A04-BR3**
 
+## 検証済みビルド
+- **01.06.000**
+- **02.04.000**
+
 ## 改造方法
 Magiskどうこう以前にroot化のやり方が分からない場合は、<br>
-[**SmileTabLaboのページ**](https://wiki3.jp/SmileTabLabo/page/19 "チャレンジパッド３(TAB-A04-BR3) - SmileTabLabo")をご覧下さい｡
+[**SmileTabLaboのページ**](https://wiki3.jp/SmileTabLabo/page/19#root "チャレンジパッド３(TAB-A04-BR3) - SmileTabLabo")をご覧下さい｡
 
