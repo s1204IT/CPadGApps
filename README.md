@@ -10,11 +10,5 @@
 
 ## 検証済みビルド
 - **01.06.000**
-- **02.04.000**
 
-## 改造方法
-Magiskどうこう以前にroot化のやり方が分からない場合は、<br>
-[**SmileTabLaboのページ**](https://wiki3.jp/SmileTabLabo/page/19#root "チャレンジパッド３(TAB-A04-BR3) - SmileTabLabo")をご覧下さい｡
-
-また､そちらのページにも記載しましたが､**必ずMagiskは[***v23.0***](https://github.com/topjohnwu/Magisk/releases/v23.0 "https://github.com/topjohnwu/Magisk/releases/v23.0")のものをお使い下さい｡**<br>
-チャレンジパッド３では**Zygisk**が非対応なため､**MagiskHide**を用いる必要があります｡
+※**02.04.000**では正常に動作出来ません｡
