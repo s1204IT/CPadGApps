@@ -1,4 +1,4 @@
-# チャレンジパッド３専用Magiskモジュール
+# CPadGApps for CT3
 
 [***ダウンロード***](//github.com/s1204IT/CPadGApps/releases/download/Nougat/Module3.zip "Module3.zip")
 
@@ -11,4 +11,4 @@
 ## 検証済みビルド
 - **01.06.000**
 
-※**02.04.000**では正常に動作出来ません｡
+※これ以降のビルドでは正常に動作できないため<br>　インストールはブロックされます｡
