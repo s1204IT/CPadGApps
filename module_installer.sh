@@ -42,5 +42,6 @@ if [ $MAGISK_VER_CODE -ne 23000 ]; then
   exit 1
 fi
 
+magiskhide enable
 install_module
 exit 0
