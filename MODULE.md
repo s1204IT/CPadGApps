@@ -6,7 +6,7 @@ Googleサービスの追加やDcha系の削除､端末管理機能等の機能�
 
 モジュールID：**CPadGApps-CT3**
 
-バージョン：v1.4.1
+バージョン：v1.5.0
 
 Magiskは***必ず [v23.0](https://cdn.jsdelivr.net/gh/topjohnwu/magisk-files@23.0/app-release.apk)*** を使用して下さい｡<br>
 SafetyNetを通したり､一部アプリを動作させるためには**MagiskHide**の機能が必要です｡
@@ -33,6 +33,8 @@ OpenGApps : 20220215
 - **CalculatorGoogle**
 - **Chrome**
 - **ConfigUpdater**
+- **DchaSetupWizard**
+  - 簡単に**Play ストア**を起動できます｡
 - **DeskClockGoogle**
 - **FilesGoogle**
 - **FirmwareUpdate**
@@ -40,8 +42,6 @@ OpenGApps : 20220215
 - **GmsCore**
 - **GmsCoreSetup**
 - **GoogleBackupTransport**
-- **GoogleCameraLegacy**
-- **GoogleContacts**
 - **GoogleContactsSyncAdapter**
 - **GoogleExtServices**
 - **GoogleExtShared**
@@ -56,8 +56,6 @@ OpenGApps : 20220215
 - **Phonesky**
 - **Photos**
 - **SetupWizard**
-- **StorageManagerGoogle**
-- **TagGoogle**
 - **talkback**
 - **WallpaperPickerGoogle**
 - **WebViewGoogle**
@@ -66,10 +64,8 @@ OpenGApps : 20220215
 
 ## アプリ
 
-- **Contacts**
 - **DchaDataBox**
 - **DchaService**
-- **DchaSetupWizard**
 - **DchaSystemSettings**
 - **DeskClock**
 - **ExtServices**
@@ -90,6 +86,7 @@ OpenGApps : 20220215
 - **OneTimeInitializer**
 - **PicoTts**
 - **PrintRecommendationService**
+- **Provision**
 
 </details><details><summary><b>あえて追加しなかったもの</b></summary>
 
@@ -119,8 +116,8 @@ Play ストアでの自動更新機能をオフにする事を強く推奨致し
 </details><details><summary><b>既知の問題</b></summary>
 
 - **Google Play開発者サービス**が更新をしないと必ずクラッシュする
+  - 再起動前にネットワークから切断すると､<br>再起動後に更新し易くなります｡
 
 </details><details><summary><b>検討</b></summary>
 
-- DchaSetupWizard を自作アプリに書き換え､ Launcher3 のウィジェットから簡単に**Play ストア**を起動できるようにする
-- **GoogleContacts**, **Provision**, **StorageManagerGoogle**, **TagGoogle** の削除
+- クラッシュするGMSを､モジュールインストール後に自動でアップデートする機能の追加
