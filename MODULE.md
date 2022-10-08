@@ -1,18 +1,19 @@
 # CPadGApps for CT3
-Googleサービスの追加やDcha系の削除､端末管理機能等の機能追加が含まれています。<br>
-:warning: インストール直後は頻繁にGMSが停止します｡<br>
-**ADB**もしくは**Play ストア**から***GMSを優先的に更新して下さい***｡
-<details><summary><b>詳細</b></summary>
+Googleサービスの追加やDcha系の削除､ 端末管理機能等の機能追加が含まれています。<br><br>
+※再起動後､ ネットワークに接続した状態でしばらく待機する必要が有ります｡<br>
+　自動処理が完了すると､ ホーム画面から**Play ストア**を開けるようになります｡
+<details><summary><b>詳細</b></summary><br>
 
 モジュールID：**CPadGApps-CT3**
 
-バージョン：v1.5.0
+バージョン：v1.5.1
 
 Magiskは***必ず [v23.0](https://cdn.jsdelivr.net/gh/topjohnwu/magisk-files@23.0/app-release.apk)*** を使用して下さい｡<br>
 SafetyNetを通したり､一部アプリを動作させるためには**MagiskHide**の機能が必要です｡
 </details>
 
-<details><summary><b>追加</b></summary>
+<details><summary><b>追加</b></summary><br>
+
 OpenGApps : 20220215
 ※一部変更
 
@@ -58,7 +59,7 @@ OpenGApps : 20220215
 - **SetupWizard**
 - **talkback**
 - **WallpaperPickerGoogle**
-- **WebViewGoogle**
+- **WebViewGoogle** (更新)
 
 </details><details><summary><b>削除</b></summary>
 
@@ -115,9 +116,4 @@ Play ストアでの自動更新機能をオフにする事を強く推奨致し
 
 </details><details><summary><b>既知の問題</b></summary>
 
-- **Google Play開発者サービス**が更新をしないと必ずクラッシュする
-  - 再起動前にネットワークから切断すると､<br>再起動後に更新し易くなります｡
-
 </details><details><summary><b>検討</b></summary>
-
-- クラッシュするGMSを､モジュールインストール後に自動でアップデートする機能の追加
