@@ -6,7 +6,7 @@ Googleサービスの追加やDcha系の削除､ 端末管理機能等の機能
 
 モジュールID：**CPadGApps-CT3**
 
-バージョン：v1.5.1
+バージョン：v1.6.0
 
 Magiskは***必ず [v23.0](https://cdn.jsdelivr.net/gh/topjohnwu/magisk-files@23.0/app-release.apk)*** を使用して下さい｡<br>
 SafetyNetを通したり､一部アプリを動作させるためには**MagiskHide**の機能が必要です｡
@@ -37,7 +37,7 @@ OpenGApps : 20220215
 - **DchaSetupWizard**
   - 簡単に**Play ストア**を起動できます｡
 - **DeskClockGoogle**
-- **FilesGoogle**
+- **Files**
 - **FirmwareUpdate**
   - 設定アプリからアクティビティを立ち上げた際に<br>設定アプリがクラッシュするのを防ぎます｡
 - **GmsCore**
@@ -65,6 +65,7 @@ OpenGApps : 20220215
 
 ## アプリ
 
+- **chromium_webview**
 - **DchaDataBox**
 - **DchaService**
 - **DchaSystemSettings**
@@ -88,6 +89,7 @@ OpenGApps : 20220215
 - **PicoTts**
 - **PrintRecommendationService**
 - **Provision**
+- **QuickSearchBox**
 
 </details><details><summary><b>あえて追加しなかったもの</b></summary>
 
@@ -101,11 +103,9 @@ OpenGApps : 20220215
 
 ## アプリ
 - **NexusLauncher**
-  - 頻繁にクラッシュするため
-- **Velvet** (GoogleQSB)
-  - 端末自体の動作に大きく影響するため
+  - クラッシュするため
 - **YouTube** 及び **YouTube Music**
-  - Vanced と言う手もあるため
+  - Vanced と言う手も有るため
 
 </details><details><summary><b>その他注意事項</b></summary>
 
@@ -117,3 +117,7 @@ Play ストアでの自動更新機能をオフにする事を強く推奨致し
 </details><details><summary><b>既知の問題</b></summary>
 
 </details><details><summary><b>検討</b></summary>
+
+- 自動で権限を付与する機能を作成
+
+</details>
