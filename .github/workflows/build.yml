@@ -23,10 +23,13 @@ jobs:
             ~/.gradle/wrapper
           key: ${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
       - name: Build with Gradle
-        run: ./gradlew assemble
+        run: |
+          ./gradlew assemble
+          cp -fra app/DchaSetupWizard/build/outputs/apk/* app/DchaSetupWizard/
+          cp -fra app/FirmwareUpdate/build/outputs/apk/* app/FirmwareUpdate/
       - name: Upload built APKs
         uses: actions/upload-artifact@v3
         with:
           name: CPadGApps_CT3-Built
-          path: app/**/build/outputs/apk/**/*.apk
+          path: app/**/**/*.apk
           if-no-files-found: ignore
