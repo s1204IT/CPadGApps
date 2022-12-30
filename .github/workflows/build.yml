@@ -7,13 +7,6 @@ on:
       - 'app/**'
       - 'gradle/wrapper/gradle-wrapper.properties'
       - '*.gradle'
-  workflow_dispatch:
-    inputs:
-      upload:
-        description: 'Upload APK'
-        type: boolean
-        required: true
-        default: false
 
 jobs:
   build:
@@ -31,8 +24,7 @@ jobs:
           key: ${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
       - name: Build with Gradle
         run: ./gradlew assemble
-      - if: ${{ github.event.inputs.upload == 'true' }}
-        name: Upload build artifact
+      - name: Upload built APKs
         uses: actions/upload-artifact@v3
         with:
           name: CPadGApps_CT3-Built
