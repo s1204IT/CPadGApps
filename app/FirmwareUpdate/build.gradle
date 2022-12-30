@@ -2,11 +2,11 @@ apply plugin: 'com.android.application'
 
 android {
     namespace 'com.panasonic.sanyo.ts.firmwareupdate'
-    compileSdk 24
+    compileSdk 28
     defaultConfig {
-        minSdk 24
+        minSdk 22
         //noinspection ExpiredTargetSdkVersion
-        targetSdk 24
+        targetSdk 28
         versionCode 101
         versionName "1.0.1"
         buildTypes {

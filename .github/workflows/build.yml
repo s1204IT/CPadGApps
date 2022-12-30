@@ -25,11 +25,11 @@ jobs:
       - name: Build with Gradle
         run: |
           ./gradlew assemble
-          cp -fra app/DchaSetupWizard/build/outputs/apk/* app/DchaSetupWizard/
-          cp -fra app/FirmwareUpdate/build/outputs/apk/* app/FirmwareUpdate/
+          cp -fra app/DchaSetupWizard/build/outputs/apk/release/* app/
+          cp -fra app/FirmwareUpdate/build/outputs/apk/release/* app/
       - name: Upload built APKs
         uses: actions/upload-artifact@v3
         with:
           name: CPadGApps_CT3-Built
-          path: app/**/**/*.apk
+          path: app/*.apk
           if-no-files-found: ignore
