@@ -1,0 +1,5 @@
+include 'app', 'fw', 'ds'
+
+def buildDir = project(':app').projectDir
+project(':fw').projectDir = new File(buildDir, 'FirmwareUpdate')
+project(':ds').projectDir = new File(buildDir, 'DchaSetupWizard')

@@ -1,0 +1,40 @@
+name: Build
+
+on:
+  push:
+    paths:
+      - '.github/workflows/build.yml'
+      - 'app/**'
+      - 'gradle/wrapper/gradle-wrapper.properties'
+      - '*.gradle'
+  workflow_dispatch:
+    inputs:
+      upload:
+        description: 'Upload APK'
+        type: boolean
+        required: true
+        default: false
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
+      - name: Cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
+      - name: Build with Gradle
+        run: ./gradlew assemble
+      - if: ${{ github.event.inputs.upload == 'true' }}
+        name: Upload build artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: CPadGApps_CT3-Built
+          path: app/**/build/outputs/apk/**/*.apk
+          if-no-files-found: ignore
