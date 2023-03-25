@@ -13,8 +13,10 @@ jobs:
     name: Build
     runs-on: ubuntu-20.04
     steps:
-      - name: Check out
+
+      - name: Checkout
         uses: actions/checkout@v3
+
       - name: Cache
         uses: actions/cache@v3
         with:
@@ -22,13 +24,26 @@ jobs:
             ~/.gradle/caches
             ~/.gradle/wrapper
           key: ${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
+
       - name: Build with Gradle
         run: |
-          ./gradlew assemble
+          if [[ -n "${{ secrets.STORE_FILE }}" ]] && [[ -n "${{ secrets.STORE_PASSWORD }}" ]] && [[ -n "${{ secrets.KEY_ALIAS }}" ]] && [[ -n "${{ secrets.KEY_PASSWORD }}" ]]; then
+            echo "${{ secrets.STORE_FILE }}" | base64 -d > app/release.jks
+            export STORE_PASSWORD="${{ secrets.STORE_PASSWORD }}"
+            export KEY_ALIAS="${{ secrets.KEY_ALIAS }}"
+            export KEY_PASSWORD="${{ secrets.KEY_PASSWORD }}"
+          else
+            export STORE_PASSWORD="android"
+            export KEY_ALIAS="android"
+            export KEY_PASSWORD="android"
+          fi
+          ./gradlew assembleRelease -q
+          echo "commit=$(echo ${{ github.sha }} | cut -c 1-7)" >> $GITHUB_ENV
           find app/{DchaSetupWizard,FirmwareUpdate}/build/outputs/apk/ -type f -name *.apk -exec mv {} app/ \;
+
       - name: Upload built APKs
         uses: actions/upload-artifact@v3
         with:
-          name: CPadGApps_CT3-Built
+          name: CPadGApps_CT3-Built@${{ env.commit }}
           path: app/*.apk
           if-no-files-found: ignore

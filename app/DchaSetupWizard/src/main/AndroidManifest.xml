@@ -1,16 +1,13 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    package="jp.co.benesse.dcha.setupwizard">
     <application
         android:allowBackup="false"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/Theme.DisablePreview.NoTitleBar"
-        tools:ignore="ExtraText">
+        android:icon="@android:mipmap/sym_def_app_icon"
+        android:label="PlayStore Opener">
         <receiver
             android:name=".StartWidget"
             android:exported="false"
-            android:label="@string/description_cs00301040_widget"
+            android:label="Launch PlayStore"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
