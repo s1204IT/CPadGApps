@@ -1,5 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="jp.co.benesse.dcha.setupwizard">
+    package="jp.co.benesse.dcha.setupwizard"
+    android:sharedUserId="me.s1204.benesse.shared"
+    android:sharedUserLabel="Benesse Un-Digichalized Tablet">
     <application
         android:allowBackup="false"
         android:icon="@android:mipmap/sym_def_app_icon"
