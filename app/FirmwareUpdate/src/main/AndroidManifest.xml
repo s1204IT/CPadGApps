@@ -1,12 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.panasonic.sanyo.ts.firmwareupdate"
-    android:sharedUserId="me.s1204.benesse.shared"
-    android:sharedUserLabel="Benesse Un-Digichalized Tablet"
-    android:background="@null">
+    package="com.panasonic.sanyo.ts.firmwareupdate">
     <application
         android:allowBackup="false"
         android:icon="@android:mipmap/sym_def_app_icon"
-        android:label="Fake">
+        android:label="オフラインアップデート">
         <activity
             android:name=".FirmwareUpdateActivity"
             android:exported="true">
