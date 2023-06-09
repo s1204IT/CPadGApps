@@ -7,6 +7,7 @@ on:
       - 'app/**'
       - 'gradle/wrapper/gradle-wrapper.properties'
       - '*.gradle'
+      - 'gradle.properties'
 
 jobs:
   build:
@@ -17,12 +18,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '8'
+
       - name: Cache
         uses: actions/cache@v3
         with:
           path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper
+            ~/.gradle/caches/
+            ~/.gradle/wrapper/
+            .gradle/
           key: ${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
 
       - name: Build with Gradle
@@ -37,7 +45,7 @@ jobs:
             export KEY_ALIAS="android"
             export KEY_PASSWORD="android"
           fi
-          ./gradlew assembleRelease -q
+          ./gradlew aR
           echo "commit=$(echo ${{ github.sha }} | cut -c 1-7)" >> $GITHUB_ENV
           find app/{DchaSetupWizard,FirmwareUpdate}/build/outputs/apk/ -type f -name *.apk -exec mv {} app/ \;
 
