@@ -6,7 +6,7 @@ Googleサービスの追加やDcha系の削除､ 端末管理機能等の機能
 
 モジュールID：**CPadGApps-CT3**
 
-バージョン：v1.6.1
+バージョン：v1.7.1
 
 Magiskは***必ず [v23.0](https://cdn.jsdelivr.net/gh/topjohnwu/magisk-files@23.0/app-release.apk)*** を使用して下さい｡<br>
 SafetyNetを通したり､一部アプリを動作させるためには**MagiskHide**の機能が必要です｡
@@ -19,45 +19,35 @@ OpenGApps : 20220215
 
 ## 機能
 
-- **android.hardware.gamepad**
 - **android.hardware.location**
 - **android.hardware.location.network**
 - **android.software.device_admin**
 - **android.software.managed_users**
-- **android.software.securely_removes_users**
 - **com.google.android.maps**
 - **com.google.android.media.effects**
 - **com.google.widevine.software.drm**
 
 ## アプリ
 
-- **CalculatorGoogle**
 - **Chrome**
 - **ConfigUpdater**
 - **DchaSetupWizard**
   - 簡単に**Play ストア**を起動できます｡
-- **DeskClockGoogle**
 - **Files**
 - **FirmwareUpdate**
   - 設定アプリからアクティビティを立ち上げた際に<br>設定アプリがクラッシュするのを防ぎます｡
 - **GmsCore**
-- **GmsCoreSetup**
 - **GoogleBackupTransport**
 - **GoogleContactsSyncAdapter**
-- **GoogleExtServices**
-- **GoogleExtShared**
 - **GoogleFeedback**
 - **GoogleLoginService**
 - **GoogleOneTimeInitializer**
 - **GooglePartnerSetup**
-- **GooglePrintRecommendationService**
 - **GoogleServicesFramework**
 - **GoogleTTS**
 - **iWnnIME_oldskin** (更新)
 - **Phonesky**
 - **Photos**
-- **SetupWizard**
-- **talkback**
 - **WallpaperPickerGoogle**
 - **WebViewGoogle** (更新)
 
@@ -69,9 +59,6 @@ OpenGApps : 20220215
 - **DchaDataBox**
 - **DchaService**
 - **DchaSystemSettings**
-- **DeskClock**
-- **ExtServices**
-- **ExtShared**
 - **Gallery2**
 - **Gallery2Drm**
 - **Gallery2Gif**
@@ -87,8 +74,6 @@ OpenGApps : 20220215
 - **MtkBrowser**
 - **OneTimeInitializer**
 - **PicoTts**
-- **PrintRecommendationService**
-- **Provision**
 - **QuickSearchBox**
 
 </details><details><summary><b>あえて追加しなかったもの</b></summary>
@@ -105,19 +90,14 @@ OpenGApps : 20220215
 - **NexusLauncher**
   - クラッシュするため
 - **YouTube** 及び **YouTube Music**
-  - Vanced と言う手も有るため
+  - ReVanced などの拡張アプリもあるため
 
 </details><details><summary><b>その他注意事項</b></summary>
 
 ## TestDPCを利用する場合
-[**TestDPC**](https://github.com/googlesamples/android-testdpc "googlesamples/android-testdpc")を利用する場合は、**必ず**バージョンが｢[**7.0.2**](https://github.com/googlesamples/android-testdpc/releases/tag/v7.0.2 "Release TestDPC 7.0.2 · googlesamples/android-testdpc")｣のものを利用し､絶対に更新を行わないでください｡
-"***[User restrictions](https://developer.android.com/reference/android/os/UserManager?hl=ja "UserManager  |  Android Developers")***"が開けなくなります｡
-Play ストアでの自動更新機能をオフにする事を強く推奨致します｡
-
-</details><details><summary><b>既知の問題</b></summary>
-
-</details><details><summary><b>検討</b></summary>
-
-- 自動で権限を付与する機能を作成
+[**TestDPC**](https://github.com/googlesamples/android-testdpc "googlesamples/android-testdpc")を利用する場合は、**必ず**バージョンが｢[**7.0.2**](https://github.com/googlesamples/android-testdpc/releases/tag/v7.0.2 "Release TestDPC 7.0.2 · googlesamples/android-testdpc")｣のものを利用し､絶対に更新を行わないでください｡  
+"**Set user restrictions**"が開けなくなります｡
+Play ストアでの自動更新機能をオフにする事を強く推奨致します｡  
+[**ここ**](https://github.com/s1204IT/TestDPC)からGradleでビルドすると､ 最新バージョンでも問題なく動作します｡
 
 </details>
