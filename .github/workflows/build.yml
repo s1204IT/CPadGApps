@@ -5,9 +5,10 @@ on:
     paths:
       - '.github/workflows/build.yml'
       - 'app/**'
-      - 'gradle/wrapper/gradle-wrapper.properties'
+      - 'gradle/**'
       - '*.gradle'
-      - 'gradle.properties'
+      - 'gradlew*'
+      - '*.properties'
 
 jobs:
   build:
@@ -16,7 +17,7 @@ jobs:
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Java
         uses: actions/setup-java@v3
@@ -35,7 +36,7 @@ jobs:
 
       - name: Build with Gradle
         run: |
-          if [[ -n "${{ secrets.STORE_FILE }}" ]] && [[ -n "${{ secrets.STORE_PASSWORD }}" ]] && [[ -n "${{ secrets.KEY_ALIAS }}" ]] && [[ -n "${{ secrets.KEY_PASSWORD }}" ]]; then
+          if [[ -n "${{ secrets.STORE_FILE }}" && -n "${{ secrets.STORE_PASSWORD }}" && -n "${{ secrets.KEY_ALIAS }}" && -n "${{ secrets.KEY_PASSWORD }}" ]]; then
             echo "${{ secrets.STORE_FILE }}" | base64 -d > app/release.jks
             export STORE_PASSWORD="${{ secrets.STORE_PASSWORD }}"
             export KEY_ALIAS="${{ secrets.KEY_ALIAS }}"
@@ -45,7 +46,7 @@ jobs:
             export KEY_ALIAS="android"
             export KEY_PASSWORD="android"
           fi
-          ./gradlew aR
+          ./gradlew aR  --no-daemon
           echo "commit=$(echo ${{ github.sha }} | cut -c 1-7)" >> $GITHUB_ENV
           find app/{DchaSetupWizard,FirmwareUpdate}/build/outputs/apk/ -type f -name *.apk -exec mv {} app/ \;
 

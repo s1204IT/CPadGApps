@@ -6,7 +6,7 @@ Googleサービスの追加やDcha系の削除､ 端末管理機能等の機能
 
 モジュールID：**CPadGApps-CT3**
 
-バージョン：v1.6.0
+バージョン：v1.6.1
 
 Magiskは***必ず [v23.0](https://cdn.jsdelivr.net/gh/topjohnwu/magisk-files@23.0/app-release.apk)*** を使用して下さい｡<br>
 SafetyNetを通したり､一部アプリを動作させるためには**MagiskHide**の機能が必要です｡

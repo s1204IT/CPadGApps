@@ -1,9 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.panasonic.sanyo.ts.firmwareupdate">
-    <application
-        android:allowBackup="false"
-        android:icon="@android:mipmap/sym_def_app_icon"
-        android:label="オフラインアップデート">
+    <application>
         <activity
             android:name=".FirmwareUpdateActivity"
             android:exported="true">

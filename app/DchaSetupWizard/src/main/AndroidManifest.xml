@@ -1,14 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="jp.co.benesse.dcha.setupwizard">
-    <application
-        android:allowBackup="false"
-        android:icon="@android:mipmap/sym_def_app_icon"
-        android:label="DchaSetupWizard">
-        <receiver
-            android:name=".StartWidget"
-            android:exported="false"
-            android:label="Launch PlayStore"
-            android:screenOrientation="landscape">
+    <application　android:label="DchaSetupWizard">
+        <receiver android:name=".StartWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
