@@ -13,14 +13,14 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
 
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Java
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '8'
@@ -46,13 +46,12 @@ jobs:
             export KEY_ALIAS="android"
             export KEY_PASSWORD="android"
           fi
-          ./gradlew aR  --no-daemon
-          echo "commit=$(echo ${{ github.sha }} | cut -c 1-7)" >> $GITHUB_ENV
-          find app/{DchaSetupWizard,FirmwareUpdate}/build/outputs/apk/ -type f -name *.apk -exec mv {} app/ \;
+          ./gradlew aR --no-daemon
+          echo "commit=$(echo ${{ github.sha }} | cut -c-7)" >> $GITHUB_ENV
 
       - name: Upload built APKs
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: CPadGApps_CT3-Built@${{ env.commit }}
-          path: app/*.apk
+          path: app/FirmwareUpdate/build/outputs/apk/FirmwareUpdate-release.apk
           if-no-files-found: ignore

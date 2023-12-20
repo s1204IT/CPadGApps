@@ -1,1 +1,1 @@
-#-printconfiguration build/outputs/mapping/release/configuration.txt
+-keep class **

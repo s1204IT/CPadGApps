@@ -1,5 +1,4 @@
-include 'app', 'FirmwareUpdate', 'DchaSetupWizard'
+include 'app', 'FirmwareUpdate'
 
 def buildDir = project(':app').projectDir
 project(':FirmwareUpdate').projectDir = new File(buildDir, 'FirmwareUpdate')
-project(':DchaSetupWizard').projectDir = new File(buildDir, 'DchaSetupWizard')

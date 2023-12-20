@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    compileSdk 28
+    compileSdk 33
     buildToolsVersion "30.0.3"
 
     defaultConfig {
@@ -29,12 +29,12 @@ android {
             debuggable false
             signingConfig signingConfigs.release
             minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles += 'proguard-rules.pro'
         }
         release {
             signingConfig signingConfigs.release
             minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles += 'proguard-rules.pro'
         }
     }
 }
