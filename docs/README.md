@@ -1,6 +1,6 @@
 # CPadGApps for CT3
 
-[***ダウンロード***](//github.com/s1204IT/CPadGApps/releases/latest/download/Module3.zip "Module3.zip")
+[***ダウンロード***](https://github.com/s1204IT/CPadGApps/releases/latest/download/Module3.zip "Module3.zip")
 
 ## 対応機種
 本体裏面のシール部分に記載されている｢**認証機器名**｣をご確認下さい｡

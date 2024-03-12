@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="jp.co.benesse.dcha.setupwizard">
-    <application android:label="DchaSetupWizard">
+    <application
+        android:label="DchaSetupWizard"
+        android:theme="@android:style/Theme.NoDisplay">
         <receiver android:name=".StartWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />

@@ -1,0 +1,48 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 33
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId 'jp.co.benesse.dcha.setupwizard'
+        minSdk 24
+        //noinspection ExpiredTargetSdkVersion
+        targetSdk 24
+        versionCode 1
+        versionName "1.0.0"
+        proguardFiles += 'proguard-rules.pro'
+    }
+
+    signingConfigs {
+        android {
+            storeFile rootProject.file('android.jks')
+            storePassword 'android'
+            keyAlias 'android'
+            keyPassword 'android'
+        }
+        release {
+            storeFile rootProject.file('release.jks')
+            storePassword System.getenv('STORE_PASSWORD')
+            keyAlias System.getenv('KEY_ALIAS')
+            keyPassword System.getenv('KEY_PASSWORD')
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.android
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.android
+            if (rootProject.file('release.jks').exists()) {
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+}
