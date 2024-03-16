@@ -10,7 +10,7 @@ public class FirmwareUpdateActivity extends Activity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     finishAndRemoveTask();
-    Toast.makeText(this, "ファームウェアアップデートはサポートされていません｡", Toast.LENGTH_SHORT).show();
+    Toast.makeText(this, "システムアップデートはサポートされていません｡", Toast.LENGTH_SHORT).show();
   }
 
 }
