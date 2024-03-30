@@ -6,16 +6,12 @@ Googleサービスの追加やDcha系の削除､ 端末管理機能等の機能
 
 モジュールID：**CPadGApps-CT3**
 
-バージョン：v2.0.0
+バージョン：v2.2.0
 
-Magiskは***必ず [v23.0](https://cdn.jsdelivr.net/gh/topjohnwu/magisk-files@23.0/app-release.apk)*** を使用して下さい｡<br>
-SafetyNetを通したり､一部アプリを動作させるためには**MagiskHide**の機能が必要です｡
+SafetyNetを通したり､一部アプリを動作させるためには**MagiskHide**の機能または[**safetynet-fix**](https://github.com/kdrag0n/safetynet-fix/releases/latest)が必要です｡
 </details>
 
 <details><summary><b>追加</b></summary><br>
-
-OpenGApps : 20220215
-※一部変更
 
 ## 機能
 
@@ -23,9 +19,6 @@ OpenGApps : 20220215
 - **android.hardware.location.network**
 - **android.software.device_admin**
 - **android.software.managed_users**
-- **com.google.android.maps**
-- **com.google.android.media.effects**
-- **com.google.widevine.software.drm**
 
 ## アプリ
 
@@ -34,6 +27,8 @@ OpenGApps : 20220215
 - **FirmwareUpdate**
   - 設定アプリからアクティビティを立ち上げた際に<br>設定アプリがクラッシュするのを防ぎます｡
 - **GmsCore**
+- **GoogleCalendarSyncAdapter**
+- **GoogleContactsSyncAdapter**
 - **GoogleServicesFramework**
 - **Phonesky**
 - **WallpaperPickerGoogle**
@@ -45,20 +40,6 @@ OpenGApps : 20220215
 - **DchaDataBox**
 - **DchaService**
 - **DchaSystemSettings**
-
-</details><details><summary><b>あえて追加しなかったもの</b></summary>
-
-## 機能
-
- ([参照](https://developer.android.com/guide/topics/manifest/uses-feature-element?hl=ja "&gt;uses-feature&lt;  |  Android Developers"))
-
-- **android.hardware.location.gps**
-  - 物理的にGPSモジュールが無いから
-  - APIレベルが21以上だから
-
-## アプリ
-- **NexusLauncher**
-  - クラッシュするため
 
 </details><details><summary><b>その他注意事項</b></summary>
 
