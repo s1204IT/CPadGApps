@@ -35,16 +35,14 @@ jobs:
             .gradle/
           key: ${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
 
-      - name: Set signing configs
-        if: github.event.repository.fork != true
-        run: |
-          echo "${{ secrets.STORE_FILE }}" | base64 -d > release.jks
-          export STORE_PASSWORD="${{ secrets.STORE_PASSWORD }}"
-          export KEY_ALIAS="${{ secrets.KEY_ALIAS }}"
-          export KEY_PASSWORD="${{ secrets.KEY_PASSWORD }}"
-
       - name: Build with Gradle
         run: |
+          if [ "${{ github.event.repository.fork }}" == "false" ]; then
+              echo "${{ secrets.STORE_FILE }}" | base64 -d > release.jks
+              export STORE_PASSWORD="${{ secrets.STORE_PASSWORD }}"
+              export KEY_ALIAS="${{ secrets.KEY_ALIAS }}"
+              export KEY_PASSWORD="${{ secrets.KEY_PASSWORD }}"
+          fi
           ./gradlew aR --no-daemon
           echo "commit=$(echo ${{ github.sha }} | cut -c-7)" >> $GITHUB_ENV
           find {DchaSetupWizard,FirmwareUpdate}/build/outputs/apk/ -type f -name *.apk -exec mv {} . \;
