@@ -10,7 +10,7 @@ android {
         applicationId 'jp.co.benesse.dcha.setupwizard'
         minSdk 24
         //noinspection ExpiredTargetSdkVersion
-        targetSdk 24
+        targetSdk 28
         versionCode 1
         versionName "1.0.0"
         proguardFiles += 'proguard-rules.pro'
@@ -32,14 +32,12 @@ android {
     }
 
     buildTypes {
-        debug {
-            minifyEnabled false
+        configureEach {
             signingConfig signingConfigs.android
         }
         release {
             minifyEnabled true
             shrinkResources true
-            signingConfig signingConfigs.android
             if (rootProject.file('release.jks').exists()) {
                 signingConfig signingConfigs.release
             }

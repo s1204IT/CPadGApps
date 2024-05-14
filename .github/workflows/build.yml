@@ -32,7 +32,7 @@ jobs:
           path: |
             ~/.gradle/caches/
             ~/.gradle/wrapper/
-            .gradle/
+            ./.gradle/
           key: ${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
 
       - name: Build with Gradle
