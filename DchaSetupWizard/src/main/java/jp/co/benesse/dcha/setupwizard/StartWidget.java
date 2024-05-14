@@ -1,6 +1,5 @@
 package jp.co.benesse.dcha.setupwizard;
 
-import android.annotation.SuppressLint;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
@@ -9,7 +8,6 @@ import android.content.Intent;
 import android.widget.RemoteViews;
 
 public class StartWidget extends AppWidgetProvider {
-  @SuppressLint("UnspecifiedImmutableFlag")
   public void onUpdate (Context c, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
     RemoteViews remoteViews = new RemoteViews(c.getPackageName(), R.layout.widget);
     Intent p = new Intent(Intent.ACTION_MAIN);
