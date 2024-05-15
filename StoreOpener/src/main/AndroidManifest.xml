@@ -1,0 +1,60 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.settings.launcher">
+
+    <application
+        android:label="Store Opener"
+        android:icon="@android:mipmap/sym_def_app_icon"
+        android:theme="@android:style/Theme.NoDisplay">
+
+        <activity
+            android:name=".Phonesky"
+            android:exported="true"
+            android:icon="@drawable/ic_launcher_finsky"
+            android:label="Play ストア"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Magisk"
+            android:exported="true"
+            android:icon="@drawable/ic_launcher_magisk"
+            android:label="Magisk"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Browser"
+            android:exported="true"
+            android:icon="@drawable/ic_launcher_browser"
+            android:label="ブラウザ"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".GmsCore"
+            android:exported="true"
+            android:icon="@drawable/ic_launcher_gsa"
+            android:label="Google設定"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

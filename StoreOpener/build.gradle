@@ -1,0 +1,47 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    //noinspection GradleDependency
+    compileSdk 33
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId 'com.android.settings.launcher'
+        minSdk 24
+        //noinspection ExpiredTargetSdkVersion
+        targetSdk 28
+        versionCode 1
+        versionName "1.0.0"
+        proguardFiles += 'proguard-rules.pro'
+    }
+
+    signingConfigs {
+        android {
+            storeFile rootProject.file('android.jks')
+            storePassword 'android'
+            keyAlias 'android'
+            keyPassword 'android'
+        }
+        release {
+            storeFile rootProject.file('release.jks')
+            storePassword System.getenv('STORE_PASSWORD')
+            keyAlias System.getenv('KEY_ALIAS')
+            keyPassword System.getenv('KEY_PASSWORD')
+        }
+    }
+
+    buildTypes {
+        configureEach {
+            signingConfig signingConfigs.android
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            if (rootProject.file('release.jks').exists()) {
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+}
