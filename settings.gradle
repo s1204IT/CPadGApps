@@ -1,2 +1,2 @@
-rootProject.name = 'CT3'
+rootProject.name = 'CPadGApps'
 include 'FirmwareUpdate', 'DchaSetupWizard', 'StoreOpener'
