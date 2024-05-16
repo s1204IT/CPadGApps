@@ -5,7 +5,7 @@ Googleサービスの追加やDcha系の削除､ PiPの機能追加が含まれ
 
 モジュールID：**CPadGApps-CTXZ**
 
-バージョン：v1.0.0
+バージョン：v1.1.0
 </details>
 
 <details><summary><b>追加</b></summary><br>
@@ -29,15 +29,14 @@ adb shell su -c pm disable com.google.android.gms/.app.settings.GoogleSettingsAc
 
 ## アプリ
 
-- **Store Opener**  
-  - 初期のランチャーから **Play ストア** や **Magisk** を起動できます。  
-    ※別のランチャーをインストールした場合は無効化してください！
 - **FirmwareUpdate**
   - 設定アプリからアクティビティを立ち上げた際に<br>設定アプリがクラッシュするのを防ぎます｡
 - **GmsCore**
 - **GoogleCalendarSyncAdapter**
 - **GoogleContactsSyncAdapter**
 - **GoogleServicesFramework**
+- **Launcher3**
+  - 既定のランチャーを置換します
 - **Phonesky**
 
 </details><details><summary><b>削除</b></summary>
@@ -45,7 +44,8 @@ adb shell su -c pm disable com.google.android.gms/.app.settings.GoogleSettingsAc
 ## アプリ
 
 - **DchaDataBox**
-- **DchaService**
+- **DchaService**  
+  厳密には無効化してるだけです
 - **DchaSystemSettings**
 - **DchaSetupWizard**
 - STS-Tottori 版 **Android SystemWebView**
@@ -63,7 +63,7 @@ adb shell su -c pm disable com.google.android.gms/.app.settings.GoogleSettingsAc
 
 SafetyNetを通したり､一部アプリを動作させるためには [**PlayIntefrityFix**](https://github.com/chiteroman/PlayIntegrityFix/releases/latest) が必要です｡
 
-**Play Integrity** は **DEVICE** まで通ります。
+2024/05/17 時点では、v15.9.8 で **Play Integrity** は **DEVICE** まで通ります。
 
 ## パッケージインストーラーを使用したい場合
 
