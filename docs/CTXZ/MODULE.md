@@ -67,7 +67,7 @@ SafetyNetを通したり､一部アプリを動作させるためには [**Play
 
 ## イヤホンが使えない
 
-[***Lesser AudioSwitch**](https://play.google.com/store/apps/details?id=com.nordskog.LesserAudioSwitch&hl=ja_JP) を使用してください。
+[**Lesser AudioSwitch**](https://play.google.com/store/apps/details?id=com.nordskog.LesserAudioSwitch&hl=ja_JP) を使用してください。
 
 ## パッケージインストーラーを使用したい場合
 
