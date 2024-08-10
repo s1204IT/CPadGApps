@@ -65,6 +65,10 @@ SafetyNetを通したり､一部アプリを動作させるためには [**Play
 
 2024/05/17 時点では、v15.9.8 で **Play Integrity** は **DEVICE** まで通ります。
 
+## イヤホンが使えない
+
+[***Lesser AudioSwitch**](https://play.google.com/store/apps/details?id=com.nordskog.LesserAudioSwitch&hl=ja_JP) を使用してください。
+
 ## パッケージインストーラーを使用したい場合
 
 **`IGNORE_DCHA_COMPLETED`** を配置していても、スイッチが塞がれているため、設定アプリから有効化する事は出来ません。  
